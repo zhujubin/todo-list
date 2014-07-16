@@ -10,5 +10,9 @@ $(function () {
     , list = new TodoList({
       el: 'ul',
       collection: todos
+    })
+    , amount = new TodoAmount({
+      el: '#amount',
+      collection: todos
     });
 });

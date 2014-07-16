@@ -6,13 +6,16 @@ var TodoList = Backbone.View.extend({
     'change input': 'input_changeHandler'
   },
   initialize: function () {
-    this.template = Handlebars.compile(this.$('script').html());
+    this.template = Handlebars.compile(this.$('script').remove().html());
     this.collection.on('add', this.collection_addHandler, this);
     this.collection.on('change', this.collection_changeHandler, this);
   },
   collection_addHandler: function (model) {
     var template = $(this.template(model.toJSON()));
-    template.attr('id', model.cid);
+    template.attr('id', model.cid)
+      .find('input').attr('id', 'todo-' + model.cid)
+      .end().find('label').attr('for', 'todo-' + model.cid);
+
     this.$el.append(template);
   },
   collection_changeHandler: function (model) {

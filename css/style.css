@@ -1,6 +1,17 @@
-ul, li {
-  list-style: none;
-}
-.completed {
-  text-decoration: line-through;
-}
+#todo-creator {
+  padding-top: 20px; }
+
+li input[type=checkbox] {
+  margin: 0;
+  vertical-align: middle; }
+li label {
+  font-weight: normal; }
+li.completed label {
+  color: #999999;
+  text-decoration: line-through; }
+
+#amount {
+  font-size: 12px;
+  text-align: right; }
+  #amount:empty {
+    display: none; }

@@ -11,6 +11,7 @@ var TodoAdd = Backbone.View.extend({
       this.collection.add({
         title: event.target.value
       });
+      event.target.value = '';
     }
   },
   submitHandler: function (event) {

@@ -1,0 +1,28 @@
+$gap: 10px
+$gap-s: 5px
+$gap-l: 20px
+
+$mute: #999
+
+#todo-creator
+  padding-top: $gap-l
+
+li
+  input[type=checkbox]
+    margin: 0
+    vertical-align: middle
+
+  label
+    font-weight: normal
+
+  &.completed
+    label
+      color: $mute
+      text-decoration: line-through
+
+#amount
+  font-size: 12px
+  text-align: right
+
+  &:empty
+    display: none
