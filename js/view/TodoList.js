@@ -9,9 +9,20 @@ var TodoList = Backbone.View.extend({
     this.template = Handlebars.compile(this.$('script').remove().html());
     this.collection.on('add', this.collection_addHandler, this);
     this.collection.on('change', this.collection_changeHandler, this);
+    this.render();
+  },
+  render: function () {
+    this.$el.html(this.template({list: this.collection.toJSON()}));
+    var collection = this.collection;
+    this.$('li').each(function (i) {
+      var model = collection.at(i);
+      $(this).attr('id', model.cid)
+        .find('input').attr('id', 'todo-' + model.cid)
+        .end().find('label').attr('for', 'todo-' + model.cid);
+    });
   },
   collection_addHandler: function (model) {
-    var template = $(this.template(model.toJSON()));
+    var template = $(this.template({list: [model.toJSON()]}));
     template.attr('id', model.cid)
       .find('input').attr('id', 'todo-' + model.cid)
       .end().find('label').attr('for', 'todo-' + model.cid);

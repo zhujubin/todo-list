@@ -13,9 +13,11 @@
   </form>
   <ul class="list-group">
     <script type="text/x-handlebars-template">
+      {{#each list}}
       <li class="list-group-item">
         <input type="checkbox" /> <label>{{title}}</label>
       </li>
+      {{/each}}
     </script>
   </ul>
   <div id="amount" class="well well-sm">

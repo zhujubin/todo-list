@@ -5,6 +5,7 @@ var TodoAmount = Backbone.View.extend({
   initialize: function () {
     this.template = Handlebars.compile(this.$('script').remove().html());
     this.collection.on('add change', this.collection_changeHandler, this);
+    this.render();
   },
   render: function () {
     var total = this.collection.length
