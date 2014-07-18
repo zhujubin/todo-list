@@ -1,0 +1,27 @@
+{
+  "name": "todo-list",
+  "version": "0.1.0",
+  "homepage": "https://github.com/Dianjoy/todo-list",
+  "authors": [
+    "Meathill <lujia.zhai@dianjoy.com>"
+  ],
+  "description": "a todo list",
+  "main": "index.html",
+  "keywords": [
+    "todo",
+    "html5",
+    "mobile"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.1.2"
+  }
+}

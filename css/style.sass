@@ -8,12 +8,24 @@ $mute: #999
   padding-top: $gap-l
 
 li
+  position: relative
+
   input[type=checkbox]
     margin: 0
     vertical-align: middle
 
   label
     font-weight: normal
+
+  .delete-button
+    position: absolute
+    right: $gap-s
+    top: $gap-s
+    border: none
+    display: none
+
+  &:hover .delete-button
+    display: block
 
   &.completed
     label

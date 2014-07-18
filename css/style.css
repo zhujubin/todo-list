@@ -1,14 +1,24 @@
 #todo-creator {
   padding-top: 20px; }
 
-li input[type=checkbox] {
-  margin: 0;
-  vertical-align: middle; }
-li label {
-  font-weight: normal; }
-li.completed label {
-  color: #999999;
-  text-decoration: line-through; }
+li {
+  position: relative; }
+  li input[type=checkbox] {
+    margin: 0;
+    vertical-align: middle; }
+  li label {
+    font-weight: normal; }
+  li .delete-button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border: none;
+    display: none; }
+  li:hover .delete-button {
+    display: block; }
+  li.completed label {
+    color: #999999;
+    text-decoration: line-through; }
 
 #amount {
   font-size: 12px;

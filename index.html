@@ -2,6 +2,7 @@
 <meta charset="UTF-8">
 <title>TODO list</title>
 <link rel="stylesheet" href="//cdn.staticfile.org/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="//cdn.staticfile.org/font-awesome/4.1.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/style.css">
 
 <div class="container">
@@ -15,7 +16,9 @@
     <script type="text/x-handlebars-template">
       {{#each list}}
       <li class="list-group-item">
-        <input type="checkbox" /> <label>{{title}}</label>
+        <input type="checkbox" />
+        <span>{{title}}</span>
+        <button type="button" class="btn btn-default delete-button"><i class="fa fa-trash-o"></i></button>
       </li>
       {{/each}}
     </script>
